@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIBEE - Customize Your Shoes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero Section Styling */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      min-height: 90vh;
+      text-align: left;
+      margin-top: 9%;
+      width: 100%;
+    }
+    
+    .hero-content {
+      max-width: 50%;
+    }
+    
+    .hero-content h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #ff5f6d;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #ff3b4f;
+    }
+    
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">UNIBEE</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Step into Style with UNIBEE</h1>
+      <p>Customize your shoes to match your unique personality. Choose your colors, designs, and make a statement!</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="hero-shoe.png" alt="Customizable Shoes">
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

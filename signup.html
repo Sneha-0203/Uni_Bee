@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Store - Customize Your Shoes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 15px;
+    }
+
+    .popup-content input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .popup-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .popup-buttons button {
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup-buttons button:hover {
+      background: #0056b3;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .close-form-btn {
+      background: #dc3545;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .close-form-btn:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sign-Up Popup -->
+  <div id="signupPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeSignupPopup()">✖</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+        <button type="button" class="close-form-btn" onclick="closeSignupPopup()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">ShoeStore</div>
+    <ul class="nav-links">
+      <li><a href="home.php">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button onclick="openSignupPopup()">Sign Up</button></li>
+    </ul>
+  </nav>
+
+  <script>
+    function openSignupPopup() {
+      document.getElementById("signupPopup").style.display = "flex";
+    }
+
+    function closeSignupPopup() {
+      document.getElementById("signupPopup").style.display = "none";
+    }
+
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Sign-up successful!");
+      closeSignupPopup();
+    });
+  </script>
+
+</body>
+</html>
